@@ -1,0 +1,9 @@
+
+fast api backend
+mongodb database connection with name "FastAPI_DB"
+
+uses 2 table
+1- user_table to store user details (with unique email_id)
+2- notes_tabel to store user notes (with unique note title)
+
+
