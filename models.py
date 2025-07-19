@@ -23,13 +23,6 @@ class user_schema(BaseModel):
 
 
 
-# class User(BaseModel):
-    # id: UUID | None = None
-    # name: str
-    # mobile: str | None = None
-    # email: str | None = None
-    # password: str | None = None
-    
 class User:
     def __init__(self):
         self.client = MongoClient(uri)
@@ -99,15 +92,15 @@ user1 = User()
 
 data={
     "id": uuid4(),
-    "name": "My First Note",
+    "name": "First Name",
     "mobile": "1234567890",
-    # "email":  None  # Assuming u1 is a dictionary with an "_id" key
+    "email":  None  # Assuming u1 is a dictionary with an "_id" key
     
 }
 
 
 asd=user1.create_user(user_schema(**data))
 
-# print(asd)
+print(asd)
 
 
