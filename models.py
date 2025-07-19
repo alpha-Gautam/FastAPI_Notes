@@ -69,7 +69,7 @@ class User:
         user = self.mydb.user_table.find_one(kwargs)
         if user is None:
             return None
-        return user
+        return user_schema(**user)
     def find_all(self, **kwargs):
 
         pointer=self.mydb.user_table.find(kwargs)
@@ -80,7 +80,7 @@ class User:
             return data
     def login(self, email: str, password: str):
         user = self.find_one(email=email)
-        if user and user.get("password") == password:
+        if user and user.password == password:
             return user
         elif user is None:
             return None
